@@ -1,0 +1,161 @@
+# Nassau Candy Distributor - Factory Reallocation & Shipping Optimization
+
+## Research Paper
+
+**Author:** Gopal Krushna Panda  
+**Date:** August 2026  
+**Institution:** Unified Mentor  
+**Project:** Data Science Optimization Analysis
+
+---
+
+## ABSTRACT
+
+This research presents a comprehensive data science analysis of Nassau Candy Distributor's shipping operations. Using machine learning and optimization techniques, we analyzed 10,194 orders to identify factory-to-product assignment inefficiencies. Our analysis reveals that sugar product assignments create 204-day delays compared to baseline, and day-of-week significantly impacts lead times (37% importance). We tested 24 optimization scenarios and identified 10 viable reassignments that can improve operational efficiency by 127 days across 1,361 orders with minimal risk. Our findings demonstrate that targeted factory reassignments offer measurable improvements without substantial implementation complexity.
+
+**Keywords:** Supply Chain Optimization, Machine Learning, Clustering, Predictive Analytics, Factory Assignment
+
+---
+
+## 1. INTRODUCTION
+
+### 1.1 Background
+Nassau Candy Distributor operates 5 production facilities across the United States, serving 4 major regions with 15 unique products. The company currently uses static, legacy-based rules to assign products to factories, resulting in suboptimal shipping distances and extended lead times.
+
+### 1.2 Problem Statement
+- **Inefficient Factory Assignments:** Current product-factory mappings don't account for regional demand patterns
+- **High Lead Times:** Average lead time of 1,321 days with significant variance (900-1,700 days)
+- **No Optimization Framework:** No systematic method to evaluate reassignment scenarios
+- **Financial Impact:** Suboptimal assignments erode profit margins and customer satisfaction
+
+### 1.3 Research Objective
+This project develops a data-driven optimization system that:
+1. Predicts shipping outcomes under different factory assignments
+2. Identifies high-impact reassignment opportunities
+3. Quantifies risks and benefits before implementation
+4. Provides actionable recommendations for management
+
+### 1.4 Scope
+- 10,194 historical orders analyzed
+- 5 production facilities evaluated
+- 15 products tested
+- 4 geographic regions covered
+- 24 optimization scenarios simulated
+
+---
+
+## 2. LITERATURE REVIEW
+
+### 2.1 Supply Chain Optimization
+Supply chain optimization literature emphasizes the importance of facility location and product assignment decisions (Mirchandani & Francis, 2010). Our approach combines:
+- **Predictive Modeling** - Forecast lead times under new configurations
+- **Clustering Analysis** - Identify similar routes for pattern recognition
+- **Scenario Simulation** - Test multiple reassignments safely
+
+### 2.2 Machine Learning for Logistics
+Recent applications use ML for:
+- Route optimization (Crainic & Laporte, 2010)
+- Demand forecasting (Carbonneau et al., 2008)
+- Facility performance prediction (Duong et al., 2015)
+
+Our contribution: Systematic scenario testing using gradient boosting for lead time prediction.
+
+### 2.3 Factory Assignment Problem
+Classic optimization problems (Facility Location Problem) typically use linear programming. Our approach is practical:
+- Avoids complex integer programming
+- Uses interpretable ML models
+- Provides risk assessments
+- Enables incremental implementation
+
+---
+
+## 3. METHODOLOGY
+
+### 3.1 Data Collection
+**Source:** Nassau Candy Distributor historical order data  
+**Period:** Full year  
+**Records:** 10,194 orders  
+**Features:** 18 original columns
+
+**Key Fields:**
+- Order ID, Order Date, Ship Date
+- Ship Mode (1st Class, 2nd Class, Standard, Same Day)
+- Customer Region (Pacific, Atlantic, Interior, Gulf)
+- Product Name (15 unique products)
+- Sales, Units, Cost, Gross Profit
+
+### 3.2 Exploratory Data Analysis (EDA)
+
+**Data Quality Assessment:**
+- Missing Values: 0 (100% complete)
+- Duplicates: 0 (all unique orders)
+- Date Format: DD-MM-YYYY
+- Numerical Range: Lead time 904-1,642 days
+
+**Descriptive Statistics:**
+| Metric | Value |
+|--------|-------|
+| Total Orders | 10,194 |
+| Avg Lead Time | 1,321 days |
+| Median Lead Time | 1,310 days |
+| Std Dev Lead Time | 156 days |
+| Min Lead Time | 904 days |
+| Max Lead Time | 1,642 days |
+
+**Distribution Analysis:**
+- **Regions:** Pacific (31%), Atlantic (27%), Interior (24%), Gulf (18%)
+- **Divisions:** Chocolate (96.5%), Sugar (2.9%), Other (0.6%)
+- **Ship Modes:** Standard (45%), 2nd Class (28%), 1st Class (18%), Same Day (9%)
+- **Profit:** Total $93,442.80 | Margin 65.9%
+
+### 3.3 Feature Engineering
+
+**New Features Created (11):**
+
+1. **Lead_Time_Days** = Ship Date - Order Date
+   - Represents actual shipping duration
+   - Range: 904-1,642 days
+
+2. **Profit_Margin** = (Gross Profit / Sales) × 100
+   - Indicator of product profitability
+   - Mean: 65.9%
+
+3. **Order_Month** = Extract month from Order Date
+   - Captures seasonal patterns
+   - Range: 1-12
+
+4. **Order_DayOfWeek** = Extract day of week from Order Date
+   - Tests if day impacts lead time
+   - Range: 0-6 (Monday-Sunday)
+
+5. **Units_per_Sale** = Units / (Sales + 0.01)
+   - Order composition metric
+   - Normalized by sales
+
+6. **Region_Code** = LabelEncoder(Region)
+   - Categorical encoding
+   - Pacific(0), Atlantic(1), Interior(2), Gulf(3)
+
+7. **ShipMode_Code** = LabelEncoder(ShipMode)
+   - Categorical encoding
+   - 1st Class(0), 2nd Class(1), Standard(2), Same Day(3)
+
+8. **Division_Code** = LabelEncoder(Division)
+   - Categorical encoding
+   - Chocolate(0), Other(1), Sugar(2)
+
+**Final Feature Set: 26 features**
+- 11 new engineered features
+- 15 original numerical/encoded features
+
+### 3.4 Predictive Modeling
+
+**Problem Definition:**
+- **Target Variable:** Lead_Time_Days
+- **Predictor Variables:** 11 features
+- **Data Split:** 80% train (8,155), 20% test (2,039)
+- **Task:** Regression (predict continuous lead time)
+
+**Models Tested:**
+
+#### Model 1: Linear Regression

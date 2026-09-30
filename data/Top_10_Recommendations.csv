@@ -1,0 +1,11 @@
+Product,Current_Factory,New_Factory,Current_Region,New_Region,Order_Count,Current_Lead_Time,Predicted_Lead_Time,Days_Saved,Improvement_%,Profit_Impact,Risk_Score
+Laffy Taffy,Sugar Shack,Wicked Choccy's,Atlantic,Atlantic,10,1383.1,1116.7,266.4,19.26,0.06,50
+Laffy Taffy,Sugar Shack,The Other Factory,Atlantic,Atlantic,10,1383.1,1116.7,266.4,19.26,0.06,50
+Laffy Taffy,Sugar Shack,Lot's O' Nuts,Atlantic,Interior,10,1383.1,1149.5,233.6,16.89,0.06,50
+Laffy Taffy,Sugar Shack,Secret Factory,Atlantic,Interior,10,1383.1,1149.5,233.6,16.89,0.06,50
+SweeTARTS,Sugar Shack,Wicked Choccy's,Atlantic,Atlantic,10,1383.5,1182.3,201.2,14.54,0.04,50
+SweeTARTS,Sugar Shack,The Other Factory,Atlantic,Atlantic,10,1383.5,1182.3,201.2,14.54,0.04,50
+SweeTARTS,Sugar Shack,Lot's O' Nuts,Atlantic,Interior,10,1383.5,1189.4,194.1,14.03,0.04,50
+SweeTARTS,Sugar Shack,Secret Factory,Atlantic,Interior,10,1383.5,1189.4,194.1,14.03,0.04,50
+Nerds,Sugar Shack,Wicked Choccy's,Atlantic,Atlantic,4,1274.0,1109.3,164.7,12.93,0.01,50
+Nerds,Sugar Shack,The Other Factory,Atlantic,Atlantic,4,1274.0,1109.3,164.7,12.93,0.01,50

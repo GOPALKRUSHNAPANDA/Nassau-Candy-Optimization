@@ -1,0 +1,25 @@
+Product,Current_Factory,New_Factory,Current_Region,New_Region,Order_Count,Current_Lead_Time,Predicted_Lead_Time,Days_Saved,Improvement_%,Profit_Impact,Risk_Score
+Laffy Taffy,Sugar Shack,Lot's O' Nuts,Atlantic,Interior,10,1383.1,1149.5,233.6,16.89,0.06,50
+Laffy Taffy,Sugar Shack,Wicked Choccy's,Atlantic,Atlantic,10,1383.1,1116.7,266.4,19.26,0.06,50
+Laffy Taffy,Sugar Shack,Secret Factory,Atlantic,Interior,10,1383.1,1149.5,233.6,16.89,0.06,50
+Laffy Taffy,Sugar Shack,The Other Factory,Atlantic,Atlantic,10,1383.1,1116.7,266.4,19.26,0.06,50
+SweeTARTS,Sugar Shack,Lot's O' Nuts,Atlantic,Interior,10,1383.5,1189.4,194.1,14.03,0.04,50
+SweeTARTS,Sugar Shack,Wicked Choccy's,Atlantic,Atlantic,10,1383.5,1182.3,201.2,14.54,0.04,50
+SweeTARTS,Sugar Shack,Secret Factory,Atlantic,Interior,10,1383.5,1189.4,194.1,14.03,0.04,50
+SweeTARTS,Sugar Shack,The Other Factory,Atlantic,Atlantic,10,1383.5,1182.3,201.2,14.54,0.04,50
+Nerds,Sugar Shack,Lot's O' Nuts,Atlantic,Interior,4,1274.0,1168.7,105.3,8.27,0.01,50
+Nerds,Sugar Shack,Wicked Choccy's,Atlantic,Atlantic,4,1274.0,1109.3,164.7,12.93,0.01,50
+Nerds,Sugar Shack,Secret Factory,Atlantic,Interior,4,1274.0,1168.7,105.3,8.27,0.01,50
+Nerds,Sugar Shack,The Other Factory,Atlantic,Atlantic,4,1274.0,1109.3,164.7,12.93,0.01,50
+Fun Dip,Sugar Shack,Lot's O' Nuts,Atlantic,Interior,3,1272.7,1268.0,4.6,0.36,0.0,50
+Fun Dip,Sugar Shack,Wicked Choccy's,Atlantic,Atlantic,3,1272.7,1264.6,8.0,0.63,0.0,50
+Fun Dip,Sugar Shack,Secret Factory,Atlantic,Interior,3,1272.7,1268.0,4.6,0.36,0.0,50
+Fun Dip,Sugar Shack,The Other Factory,Atlantic,Atlantic,3,1272.7,1264.6,8.0,0.63,0.0,50
+Fizzy Lifting Drinks,Sugar Shack,Lot's O' Nuts,Atlantic,Interior,6,1273.5,1140.9,132.6,10.41,0.05,50
+Fizzy Lifting Drinks,Sugar Shack,Wicked Choccy's,Atlantic,Atlantic,6,1273.5,1155.8,117.7,9.24,0.04,50
+Fizzy Lifting Drinks,Sugar Shack,Secret Factory,Atlantic,Interior,6,1273.5,1140.9,132.6,10.41,0.05,50
+Fizzy Lifting Drinks,Sugar Shack,The Other Factory,Atlantic,Atlantic,6,1273.5,1155.8,117.7,9.24,0.04,50
+Everlasting Gobstopper,Secret Factory,Lot's O' Nuts,Gulf,Interior,3,1394.7,1342.4,52.2,3.74,0.04,50
+Everlasting Gobstopper,Secret Factory,Wicked Choccy's,Gulf,Atlantic,3,1394.7,1320.0,74.7,5.35,0.06,50
+Everlasting Gobstopper,Secret Factory,Sugar Shack,Gulf,Interior,3,1394.7,1342.4,52.2,3.74,0.04,50
+Everlasting Gobstopper,Secret Factory,The Other Factory,Gulf,Atlantic,3,1394.7,1320.0,74.7,5.35,0.06,50
